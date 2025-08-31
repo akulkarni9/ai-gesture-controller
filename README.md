@@ -1,69 +1,79 @@
-# React + TypeScript + Vite
+# ✋ AI Gesture Controller  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application that uses your webcam to perform real-time hand tracking, allowing you to control a 3D object with natural hand gestures.  
 
-Currently, two official plugins are available:
+Built with **React 19, Vite, Three.js, and Google's MediaPipe**.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Core Features  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Real-Time Gesture Recognition**  
+  Utilizes the MediaPipe Hand Landmarker model to track 21 key points on your hand in real-time, directly in the browser.  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Interactive 3D Scene**  
+  Renders a dynamic 3D scene using Three.js, featuring:  
+  - A visually appealing Torus Knot  
+  - Dynamic lighting  
+  - A starfield background  
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Intuitive Controls**  
+  - **Rotate:** Move your index finger to rotate the 3D object on the X and Y axes.  
+  - **Zoom:** Pinch your thumb and index finger together or spread them apart to control the camera's zoom level.  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Client-Side AI**  
+  All AI processing happens on your device. Your webcam data never leaves your computer, ensuring **100% privacy**.  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Responsive Design**  
+  The UI and 3D canvas adapt seamlessly to different screen sizes.  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Technology Stack  
+
+- **Frontend:** React 19, Vite, TypeScript  
+- **Styling:** Tailwind CSS v4  
+- **3D Graphics:** Three.js  
+- **AI/ML:** Google MediaPipe (Hand Landmarker Task)  
+- **Deployment:** Vercel  
+
+---
+
+## ⚙️ How It Works  
+
+The application follows a continuous, real-time loop:  
+
+1. **Webcam Capture**  
+   Accesses your webcam feed securely using the `getUserMedia` API.  
+
+2. **AI Processing**  
+   Each video frame is passed to the MediaPipe Hand Landmarker model, running locally on the GPU via WebGL.  
+
+3. **Landmark Extraction**  
+   The model outputs the 3D coordinates of the hand landmarks.  
+
+4. **Gesture Mapping**  
+   - The coordinates of the **index finger tip** (landmark `#8`) are mapped to the 3D object's rotation.  
+   - The distance between the **thumb tip** (landmark `#4`) and the **index finger tip** is used to control the camera's zoom.  
+
+5. **3D Rendering**  
+   The Three.js scene is updated in a `requestAnimationFrame` loop, ensuring smooth interactivity.  
+
+---
+
+## 🛠️ Local Setup & Installation  
+
+To run this project locally:  
+
+```bash
+# Clone the repository
+git clone https://github.com/akulkarni9/ai-gesture-controller.git  
+
+# Navigate to the project directory
+cd ai-gesture-controller  
+
+# Install dependencies
+npm install  
+
+# Start the development server
+npm run dev
