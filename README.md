@@ -78,7 +78,7 @@ npm install
 # Start the development server
 npm run dev
 
----
+---  
 
 ## 🔮 Future Plans. 
 Expanded Gesture Library: Implement more complex gestures, such as a closed fist to change the object's color or a "peace" sign to switch between different 3D models.
