@@ -68,7 +68,7 @@ Built with **React 19, Vite, Three.js, and Google's MediaPipe**.
    git clone https://github.com/akulkarni9/ai-gesture-controller.git
 2. **Install dependencies:**  
    ```bash
-   cd your-repo-name
+   cd ai-gesture-controller
    npm install
 3. **Run the development server:**  
    ```bash
