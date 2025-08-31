@@ -76,6 +76,35 @@ Your site will be available at: http://localhost:5173
 
 ---  
 
+## 🔮 Future Plans  
+Expanded Gesture Library
+Add more complex gestures (e.g., closed fist → change object color, "peace" sign → switch 3D models).
+
+Custom Model Uploads
+Allow users to upload their own .glb or .obj 3D models.
+
+Physics Engine Integration
+Use react-three-rapier for realistic physics, letting users "push" and interact with objects.
+
+UI for Model Customization
+Real-time controls for material properties like color, roughness, and metalness.
+
+Performance Optimization
+Optimize the prediction loop and rendering pipeline for smoother performance on low-end devices.  
+
+ ---   
+
+## ☕ Support Me
+If you find this portfolio template useful and would like to show your appreciation, you can buy me a coffee! It's never expected, but always appreciated.
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/akulkarni9)
+
+---
+
+## 📄 License
+This project is distributed under the MIT License. See `LICENSE` for more information.
+
+---
 
 
 
