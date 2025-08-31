@@ -2,7 +2,9 @@
 
 An interactive web application that uses your webcam to perform real-time hand tracking, allowing you to control a 3D object with natural hand gestures.  
 
-Built with **React 19, Vite, Three.js, and Google's MediaPipe**.
+Built with **React 19, Vite, Three.js, and Google's MediaPipe**.  
+  
+**[View Live Demo](https://ai-gesture-controller.vercel.app/)**
 
 ---
 
@@ -77,19 +79,19 @@ Your site will be available at: http://localhost:5173
 ---  
 
 ## 🔮 Future Plans  
-Expanded Gesture Library
+1. Expanded Gesture Library
 Add more complex gestures (e.g., closed fist → change object color, "peace" sign → switch 3D models).
 
-Custom Model Uploads
+2. Custom Model Uploads
 Allow users to upload their own .glb or .obj 3D models.
 
-Physics Engine Integration
+3. Physics Engine Integration
 Use react-three-rapier for realistic physics, letting users "push" and interact with objects.
 
-UI for Model Customization
+4. UI for Model Customization
 Real-time controls for material properties like color, roughness, and metalness.
 
-Performance Optimization
+5. Performance Optimization
 Optimize the prediction loop and rendering pipeline for smoother performance on low-end devices.  
 
  ---   
