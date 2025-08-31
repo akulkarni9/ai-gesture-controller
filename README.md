@@ -78,6 +78,8 @@ npm install
 # Start the development server
 npm run dev
 
+bash```
+
 ---  
 
 ## 🔮 Future Plans. 
