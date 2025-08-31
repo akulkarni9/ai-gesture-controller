@@ -2,7 +2,7 @@
 
 An interactive web application that uses your webcam to perform real-time hand tracking, allowing you to control a 3D object with natural hand gestures.  
 
-Built with **React 19, Vite, Three.js, and Google's MediaPipe**.  
+Built with **React 19, TailwindCSS V4, Vite, Three.js, and Google's MediaPipe**.  
   
 **[View Live Demo](https://ai-gesture-controller.vercel.app/)**
 
