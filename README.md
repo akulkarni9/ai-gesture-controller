@@ -77,3 +77,16 @@ npm install
 
 # Start the development server
 npm run dev
+
+---
+
+## 🔮 Future Plans. 
+Expanded Gesture Library: Implement more complex gestures, such as a closed fist to change the object's color or a "peace" sign to switch between different 3D models.
+
+Custom Model Uploads: Allow users to upload their own .glb or .obj 3D models to control.
+
+Physics Engine Integration: Incorporate a physics engine like react-three-rapier to allow users to "push" and interact with objects in a more dynamic way.
+
+UI for Model Customization: Add controls to adjust material properties like color, roughness, and metalness in real-time.
+
+Performance Optimization: Further optimize the prediction loop and rendering pipeline for smoother performance on lower-end devices.
